@@ -1,0 +1,51 @@
+﻿生成启动时间为 2018/12/18 16:56:59。
+     1>项目“E:\scut\jiulong\KCF_three_thread\kinect\kinect\kinect.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\kinect.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"E:\lib\VTK 5.6\bin" /I"E:\lib\VTK 5.6\bin\Common" /I"E:\lib\VTK 5.6\bin\Utilities" /I"E:\lib\VTK 5.6\bin\VolumeRendering" /I"E:\lib\VTK 5.6\bin\Rendering" /I"E:\lib\VTK 5.6\bin\Charts" /I"E:\lib\VTK 5.6\bin\GUISupport\MFC" /I"E:\lib\VTK 5.6\bin\Utilities\vtkalglib" /I"E:\lib\VTK 5.6\vtk\Infovis" /I"E:\lib\VTK 5.6\vtk\Geovis" /I"E:\lib\VTK 5.6\vtk\Views" /I"E:\lib\VTK 5.6\vtk\VolumeRendering" /I"E:\lib\VTK 5.6\vtk\Hybrid" /I"E:\lib\VTK 5.6\vtk\Widgets" /I"E:\lib\VTK 5.6\vtk\Rendering" /I"E:\lib\VTK 5.6\vtk\Charts" /I"E:\lib\VTK 5.6\vtk\Rendering\Testing\Cxx" /I"E:\lib\VTK 5.6\vtk\IO" /I"E:\lib\VTK 5.6\vtk\Imaging" /I"E:\lib\VTK 5.6\vtk\Graphics" /I"E:\lib\VTK 5.6\vtk\GenericFiltering" /I"E:\lib\VTK 5.6\vtk\Filtering" /I"E:\lib\VTK 5.6\vtk\Common" /I"E:\lib\VTK 5.6\vtk\Utilities" /I"E:\lib\VTK 5.6\vtk\Common\Testing\Cxx" /I"E:\lib\VTK 5.6\bin\Utilities\vtklibproj4" /I"E:\lib\VTK 5.6\vtk\Utilities\vtklibproj4" /I"E:\lib\VTK 5.6\bin\Utilities\DICOMParser" /I"E:\lib\VTK 5.6\vtk\Utilities\DICOMParser" /I"E:\lib\VTK 5.6\bin\Utilities\vtkfreetype\include" /I"E:\lib\VTK 5.6\vtk\Utilities\vtkfreetype\include" /I"E:\lib\VTK 5.6\bin\Utilities\vtknetcdf" /I"E:\lib\VTK 5.6\vtk\Utilities\vtknetcdf" /I"E:\lib\VTK 5.6\bin\Utilities\vtkexodus2\include" /I"E:\lib\VTK 5.6\vtk\Utilities\vtkexodus2\include" /I"E:\lib\VTK 5.6\bin\Utilities\MaterialLibrary" /I"E:\lib\VTK 5.6\vtk\Utilities\MaterialLibrary" /I"E:\lib\VTK 5.6\bin\Utilities\verdict" /I"E:\lib\VTK 5.6\vtk\Utilities\verdict" /I"E:\lib\VTK 5.6\vtk\Utilities\utf8\source" /I"E:\lib\VTK 5.6\vtk\GUISupport\MFC" /I"E:\lib\VTK 5.6\vtk\Utilities\vtkalglib" /I"E:\lib\VTK 5.6\vtk\Utilities\ftgl\src" /I"E:\lib\VTK 5.6\bin\Utilities\ftgl" /I"E:\lib\VTK 5.6\vtk\Infovis" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\kinect.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt kinectDlg.cpp
+         kinectDlg.cpp
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.h(51): warning C4522: “MyPoint”: 指定了多个赋值运算符
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(215): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(216): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(284): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(837): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(846): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(855): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(888): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(915): warning C4101: “e”: 未引用的局部变量
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(951): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(955): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(959): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
+       ResourceCompile:
+         所有输出均为最新。
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\scut\jiulong\KCF_three_thread\kinect\Debug\kinect.exe" /INCREMENTAL /NOLOGO opencv_calib3d2410d.lib opencv_contrib2410d.lib opencv_core2410d.lib opencv_features2d2410d.lib opencv_flann2410d.lib opencv_gpu2410d.lib opencv_highgui2410d.lib opencv_imgproc2410d.lib opencv_legacy2410d.lib opencv_ml2410d.lib opencv_nonfree2410d.lib opencv_objdetect2410d.lib opencv_ocl2410d.lib opencv_photo2410d.lib opencv_stitching2410d.lib opencv_superres2410d.lib opencv_video2410d.lib opencv_videostab2410d.lib openNI.lib opencv_calib3d2410d.lib opencv_contrib2410d.lib opencv_core2410d.lib opencv_features2d2410d.lib opencv_flann2410d.lib opencv_gpu2410d.lib opencv_highgui2410d.lib opencv_imgproc2410d.lib opencv_legacy2410d.lib opencv_ml2410d.lib opencv_nonfree2410d.lib opencv_objdetect2410d.lib opencv_ocl2410d.lib opencv_photo2410d.lib opencv_stitching2410d.lib opencv_superres2410d.lib opencv_video2410d.lib opencv_videostab2410d.lib openNI.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib comctl32.lib vfw32.lib ws2_32.lib wsock32.lib opengl32.lib "E:\lib\VTK 5.6\bin\bin\Debug\vtkRendering.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkIO.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkDICOMParser.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkNetCDF_cxx.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkNetCDF.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkmetaio.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtksqlite.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkpng.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtktiff.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkzlib.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkjpeg.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkexpat.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkGraphics.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkverdict.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkImaging.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkFiltering.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkCommon.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtksys.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkftgl.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkfreetype.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkMFC.lib" "E:\lib\VTK 5.6\bin\bin\Debug\vtkWidgets.lib" /MANIFEST /ManifestFile:"Debug\kinect.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\scut\jiulong\KCF_three_thread\kinect\Debug\kinect.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\scut\jiulong\KCF_three_thread\kinect\Debug\kinect.lib" /MACHINE:X86 Debug\kinect.res
+         Debug\kinect.exe.embed.manifest.res
+         Debug\fhog.obj
+         Debug\kcftracker.obj
+         Debug\kinect.obj
+         Debug\kinectDlg.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\kinect.exe.embed.manifest" /manifest Debug\kinect.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         kinect.vcxproj -> E:\scut\jiulong\KCF_three_thread\kinect\Debug\kinect.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\kinect.unsuccessfulbuild”。
+         正在对“Debug\kinect.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\scut\jiulong\KCF_three_thread\kinect\kinect\kinect.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:44.27
