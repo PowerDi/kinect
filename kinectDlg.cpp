@@ -1,5 +1,5 @@
 
-// kinectDlg.cpp : ÊµÏÖÎÄ¼ş
+// kinectDlg.cpp : å®ç°æ–‡ä»¶
 //
 #include "stdafx.h"
 #include "kinectDlg.h"
@@ -19,7 +19,7 @@ using namespace cv;
 
 
 using namespace std;
-//kcf²ÎÊı
+//kcfå‚æ•°
 #define HOG true
 #define FIXEDWINDOW false
 #define MULTISCALE true
@@ -31,20 +31,20 @@ using namespace std;
 #endif
 
 
-// ÓÃÓÚÓ¦ÓÃ³ÌĞò¡°¹ØÓÚ¡±²Ëµ¥ÏîµÄ CAboutDlg ¶Ô»°¿ò
+// ç”¨äºåº”ç”¨ç¨‹åºâ€œå…³äºâ€èœå•é¡¹çš„ CAboutDlg å¯¹è¯æ¡†
 
 class CAboutDlg : public CDialogEx
 {
 public:
 	CAboutDlg();
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_ABOUTBOX };
 
 	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 
-// ÊµÏÖ
+// å®ç°
 protected:
 	DECLARE_MESSAGE_MAP()
 };
@@ -62,7 +62,7 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-// CkinectDlg ¶Ô»°¿ò
+// CkinectDlg å¯¹è¯æ¡†
 
 
 
@@ -88,15 +88,15 @@ BEGIN_MESSAGE_MAP(CkinectDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-// CkinectDlg ÏûÏ¢´¦Àí³ÌĞò
+// CkinectDlg æ¶ˆæ¯å¤„ç†ç¨‹åº
 
 BOOL CkinectDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
-	// ½«¡°¹ØÓÚ...¡±²Ëµ¥ÏîÌí¼Óµ½ÏµÍ³²Ëµ¥ÖĞ¡£
+	// å°†â€œå…³äº...â€èœå•é¡¹æ·»åŠ åˆ°ç³»ç»Ÿèœå•ä¸­ã€‚
 
-	// IDM_ABOUTBOX ±ØĞëÔÚÏµÍ³ÃüÁî·¶Î§ÄÚ¡£
+	// IDM_ABOUTBOX å¿…é¡»åœ¨ç³»ç»Ÿå‘½ä»¤èŒƒå›´å†…ã€‚
 	ASSERT((IDM_ABOUTBOX & 0xFFF0) == IDM_ABOUTBOX);
 	ASSERT(IDM_ABOUTBOX < 0xF000);
 
@@ -114,14 +114,14 @@ BOOL CkinectDlg::OnInitDialog()
 		}
 	}
 
-	// ÉèÖÃ´Ë¶Ô»°¿òµÄÍ¼±ê¡£µ±Ó¦ÓÃ³ÌĞòÖ÷´°¿Ú²»ÊÇ¶Ô»°¿òÊ±£¬¿ò¼Ü½«×Ô¶¯
-	//  Ö´ĞĞ´Ë²Ù×÷
-	SetIcon(m_hIcon, TRUE);			// ÉèÖÃ´óÍ¼±ê
-	SetIcon(m_hIcon, FALSE);		// ÉèÖÃĞ¡Í¼±ê
+	// è®¾ç½®æ­¤å¯¹è¯æ¡†çš„å›¾æ ‡ã€‚å½“åº”ç”¨ç¨‹åºä¸»çª—å£ä¸æ˜¯å¯¹è¯æ¡†æ—¶ï¼Œæ¡†æ¶å°†è‡ªåŠ¨
+	//  æ‰§è¡Œæ­¤æ“ä½œ
+	SetIcon(m_hIcon, TRUE);			// è®¾ç½®å¤§å›¾æ ‡
+	SetIcon(m_hIcon, FALSE);		// è®¾ç½®å°å›¾æ ‡
 
-	// TODO: ÔÚ´ËÌí¼Ó¶îÍâµÄ³õÊ¼»¯´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ é¢å¤–çš„åˆå§‹åŒ–ä»£ç 
 
-	return TRUE;  // ³ı·Ç½«½¹µãÉèÖÃµ½¿Ø¼ş£¬·ñÔò·µ»Ø TRUE
+	return TRUE;  // é™¤éå°†ç„¦ç‚¹è®¾ç½®åˆ°æ§ä»¶ï¼Œå¦åˆ™è¿”å› TRUE
 }
 
 void CkinectDlg::OnSysCommand(UINT nID, LPARAM lParam)
@@ -137,19 +137,19 @@ void CkinectDlg::OnSysCommand(UINT nID, LPARAM lParam)
 	}
 }
 
-// Èç¹ûÏò¶Ô»°¿òÌí¼Ó×îĞ¡»¯°´Å¥£¬ÔòĞèÒªÏÂÃæµÄ´úÂë
-//  À´»æÖÆ¸ÃÍ¼±ê¡£¶ÔÓÚÊ¹ÓÃÎÄµµ/ÊÓÍ¼Ä£ĞÍµÄ MFC Ó¦ÓÃ³ÌĞò£¬
-//  Õâ½«ÓÉ¿ò¼Ü×Ô¶¯Íê³É¡£
+// å¦‚æœå‘å¯¹è¯æ¡†æ·»åŠ æœ€å°åŒ–æŒ‰é’®ï¼Œåˆ™éœ€è¦ä¸‹é¢çš„ä»£ç 
+//  æ¥ç»˜åˆ¶è¯¥å›¾æ ‡ã€‚å¯¹äºä½¿ç”¨æ–‡æ¡£/è§†å›¾æ¨¡å‹çš„ MFC åº”ç”¨ç¨‹åºï¼Œ
+//  è¿™å°†ç”±æ¡†æ¶è‡ªåŠ¨å®Œæˆã€‚
 
 void CkinectDlg::OnPaint()
 {
 	if (IsIconic())
 	{
-		CPaintDC dc(this); // ÓÃÓÚ»æÖÆµÄÉè±¸ÉÏÏÂÎÄ
+		CPaintDC dc(this); // ç”¨äºç»˜åˆ¶çš„è®¾å¤‡ä¸Šä¸‹æ–‡
 
 		SendMessage(WM_ICONERASEBKGND, reinterpret_cast<WPARAM>(dc.GetSafeHdc()), 0);
 
-		// Ê¹Í¼±êÔÚ¹¤×÷Çø¾ØĞÎÖĞ¾ÓÖĞ
+		// ä½¿å›¾æ ‡åœ¨å·¥ä½œåŒºçŸ©å½¢ä¸­å±…ä¸­
 		int cxIcon = GetSystemMetrics(SM_CXICON);
 		int cyIcon = GetSystemMetrics(SM_CYICON);
 		CRect rect;
@@ -157,7 +157,7 @@ void CkinectDlg::OnPaint()
 		int x = (rect.Width() - cxIcon + 1) / 2;
 		int y = (rect.Height() - cyIcon + 1) / 2;
 
-		// »æÖÆÍ¼±ê
+		// ç»˜åˆ¶å›¾æ ‡
 		dc.DrawIcon(x, y, m_hIcon);
 	}
 	else
@@ -166,8 +166,8 @@ void CkinectDlg::OnPaint()
 	}
 }
 
-//µ±ÓÃ»§ÍÏ¶¯×îĞ¡»¯´°¿ÚÊ±ÏµÍ³µ÷ÓÃ´Ëº¯ÊıÈ¡µÃ¹â±ê
-//ÏÔÊ¾¡£
+//å½“ç”¨æˆ·æ‹–åŠ¨æœ€å°åŒ–çª—å£æ—¶ç³»ç»Ÿè°ƒç”¨æ­¤å‡½æ•°å–å¾—å…‰æ ‡
+//æ˜¾ç¤ºã€‚
 HCURSOR CkinectDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
@@ -200,7 +200,7 @@ void GeneratePointCloud( xn::DepthGenerator& rDepthGen,
 		}
 	}
  
-	//lan Ë«±ßÂË²¨
+	//lan åŒè¾¹æ»¤æ³¢
 	float *pDataOut=new float[640*480];
 	float ws=0.0,wr=0.0;
 	float wtotal=0.0;
@@ -219,9 +219,9 @@ void GeneratePointCloud( xn::DepthGenerator& rDepthGen,
 		}
 		pDataOut[i*640+j] /=wtotal;
 	}
-	//lanË«±ßÂË²¨
+	//lanåŒè¾¹æ»¤æ³¢
 
-	//lan×ª»»³ÉÊÀ½ç×ø±êÏµ£¿
+	//lanè½¬æ¢æˆä¸–ç•Œåæ ‡ç³»ï¼Ÿ
 	for (i=0;i<mDepthMD.FullXRes()*mDepthMD.FullYRes();i++)
 		pDepthPointSet[i].Z=pDataOut[i];
 	delete []pDataOut;
@@ -231,8 +231,8 @@ void GeneratePointCloud( xn::DepthGenerator& rDepthGen,
 		for( i = 0; i < mDepthMD.FullXRes(); ++i )
 		{
 			idx = idxShift + i;
-			pDepthPointSet[idx].X =((float)i-320)*pDepthPointSet[idx].Z/525;  //525Îª½¹¾à
-			pDepthPointSet[idx].Y =-((float)j-240)*pDepthPointSet[idx].Z/525;  //²Î¿¼Á´½Ó£ºhttp://www.cnblogs.com/gaoxiang12/p/3695962.html
+			pDepthPointSet[idx].X =((float)i-320)*pDepthPointSet[idx].Z/525;  //525ä¸ºç„¦è·
+			pDepthPointSet[idx].Y =-((float)j-240)*pDepthPointSet[idx].Z/525;  //å‚è€ƒé“¾æ¥ï¼šhttp://www.cnblogs.com/gaoxiang12/p/3695962.html
 		}
 	}
 	//lan
@@ -254,16 +254,16 @@ struct CvKinectImage
 	Mat depth;
 	Mat image;
 	IplImage* depth_origin;
-	Rect select;   //Ä¿±ê¿òµÄÎ»ÖÃ 
+	Rect select;   //ç›®æ ‡æ¡†çš„ä½ç½® 
 	Point origin;
 	unsigned short pointData; 
 };
 
-//È«¾Ö±äÁ¿¶¨ÒåÇø
+//å…¨å±€å˜é‡å®šä¹‰åŒº
 bool select_flag=false;
 bool Get_rect=false;
-int num_of_savepoint = 100; //ÔË¶¯¶àÉÙ¸öµã¾Í½øĞĞ±£´æ
-int g_rectCount=0; //¼ÇÂ¼»­¿òÊıÁ¿
+int num_of_savepoint = 100; //è¿åŠ¨å¤šå°‘ä¸ªç‚¹å°±è¿›è¡Œä¿å­˜
+int g_rectCount=0; //è®°å½•ç”»æ¡†æ•°é‡
 bool stop_signal=false;
 vector<SColorPoint3D> vPointCloud;
 HANDLE mutex = CreateMutex(NULL,false,NULL);
@@ -280,23 +280,23 @@ void onMouse(int event,int x,int y,int flags,void* param)
 {
 	vector<CvKinectImage>* kinectImage = (vector<CvKinectImage>*)param;
 	//CvKinectImage* kinectImage = (CvKinectImage*)param;
-    //Point origin;//²»ÄÜÔÚÕâ¸öµØ·½½øĞĞ¶¨Òå£¬ÒòÎªÕâÊÇ»ùÓÚÏûÏ¢ÏìÓ¦µÄº¯Êı£¬Ö´ĞĞÍêºóorigin¾ÍÊÍ·ÅÁË£¬ËùÒÔ´ï²»µ½Ğ§¹û¡£
+    //Point origin;//ä¸èƒ½åœ¨è¿™ä¸ªåœ°æ–¹è¿›è¡Œå®šä¹‰ï¼Œå› ä¸ºè¿™æ˜¯åŸºäºæ¶ˆæ¯å“åº”çš„å‡½æ•°ï¼Œæ‰§è¡Œå®Œåoriginå°±é‡Šæ”¾äº†ï¼Œæ‰€ä»¥è¾¾ä¸åˆ°æ•ˆæœã€‚
 	if (g_rectCount<kinectImage->size())
 	{
 		if(select_flag)
 		{
-			kinectImage->at(g_rectCount).select.x=MIN(kinectImage->at(g_rectCount).origin.x,x);//²»Ò»¶¨ÒªµÈÊó±êµ¯Æğ²Å¼ÆËã¾ØĞÎ¿ò£¬¶øÓ¦¸ÃÔÚÊó±ê°´ÏÂ¿ªÊ¼µ½µ¯ÆğÕâ¶ÎÊ±¼äÊµÊ±¼ÆËãËùÑ¡¾ØĞÎ¿ò
+			kinectImage->at(g_rectCount).select.x=MIN(kinectImage->at(g_rectCount).origin.x,x);//ä¸ä¸€å®šè¦ç­‰é¼ æ ‡å¼¹èµ·æ‰è®¡ç®—çŸ©å½¢æ¡†ï¼Œè€Œåº”è¯¥åœ¨é¼ æ ‡æŒ‰ä¸‹å¼€å§‹åˆ°å¼¹èµ·è¿™æ®µæ—¶é—´å®æ—¶è®¡ç®—æ‰€é€‰çŸ©å½¢æ¡†
 			kinectImage->at(g_rectCount).select.y=MIN(kinectImage->at(g_rectCount).origin.y,y);
-			kinectImage->at(g_rectCount).select.width=abs(x-kinectImage->at(g_rectCount).origin.x);//Ëã¾ØĞÎ¿í¶ÈºÍ¸ß¶È
+			kinectImage->at(g_rectCount).select.width=abs(x-kinectImage->at(g_rectCount).origin.x);//ç®—çŸ©å½¢å®½åº¦å’Œé«˜åº¦
 			kinectImage->at(g_rectCount).select.height=abs(y-kinectImage->at(g_rectCount).origin.y);
-			kinectImage->at(g_rectCount).select&=Rect(0,0,kinectImage->at(g_rectCount).image.cols,kinectImage->at(g_rectCount).image.rows);//±£Ö¤ËùÑ¡¾ØĞÎ¿òÔÚÊÓÆµÏÔÊ¾ÇøÓòÖ®ÄÚ
+			kinectImage->at(g_rectCount).select&=Rect(0,0,kinectImage->at(g_rectCount).image.cols,kinectImage->at(g_rectCount).image.rows);//ä¿è¯æ‰€é€‰çŸ©å½¢æ¡†åœ¨è§†é¢‘æ˜¾ç¤ºåŒºåŸŸä¹‹å†…
 			
 		}
 		if(event==CV_EVENT_LBUTTONDOWN)
 		{
-			select_flag=true;//Êó±ê°´ÏÂµÄ±êÖ¾¸³ÕæÖµ
-			kinectImage->at(g_rectCount).origin=Point(x,y);//±£´æÏÂÀ´µ¥»÷ÊÇ²¶×½µ½µÄµã
-			kinectImage->at(g_rectCount).select=Rect(x,y,0,0);//ÕâÀïÒ»¶¨Òª³õÊ¼»¯£¬¿íºÍ¸ßÎª(0,0)ÊÇÒòÎªÔÚopencvÖĞRect¾ØĞÎ¿òÀàÄÚµÄµãÊÇ°üº¬×óÉÏ½ÇÄÇ¸öµãµÄ£¬µ«ÊÇ²»º¬ÓÒÏÂ½ÇÄÇ¸öµã
+			select_flag=true;//é¼ æ ‡æŒ‰ä¸‹çš„æ ‡å¿—èµ‹çœŸå€¼
+			kinectImage->at(g_rectCount).origin=Point(x,y);//ä¿å­˜ä¸‹æ¥å•å‡»æ˜¯æ•æ‰åˆ°çš„ç‚¹
+			kinectImage->at(g_rectCount).select=Rect(x,y,0,0);//è¿™é‡Œä¸€å®šè¦åˆå§‹åŒ–ï¼Œå®½å’Œé«˜ä¸º(0,0)æ˜¯å› ä¸ºåœ¨opencvä¸­RectçŸ©å½¢æ¡†ç±»å†…çš„ç‚¹æ˜¯åŒ…å«å·¦ä¸Šè§’é‚£ä¸ªç‚¹çš„ï¼Œä½†æ˜¯ä¸å«å³ä¸‹è§’é‚£ä¸ªç‚¹
 		}
 		else if(event==CV_EVENT_LBUTTONUP)
 		{
@@ -334,7 +334,7 @@ DWORD WINAPI CkinectDlg::kcf1proc(LPVOID lpParameter)
 	Mat roi_frame;
 	Mat origin_image;
 	Mat new_image;
-	Mat temp_depth; //ÁÙÊ±Éî¶ÈÍ¼
+	Mat temp_depth; //ä¸´æ—¶æ·±åº¦å›¾
 	Rect result;
 	int xMin,yMin,width,height;
 	int count_f=0; //record fps
@@ -342,10 +342,10 @@ DWORD WINAPI CkinectDlg::kcf1proc(LPVOID lpParameter)
 	{
 		if (stop_signal==true)
 		{
-			break; //Ïß³Ì½áÊø±êÖ¾
+			break; //çº¿ç¨‹ç»“æŸæ ‡å¿—
 		}
 
-		if ((g_rectCount==1)&&init_down==false) //±ØĞëË«ÖØÅĞ¶Ï±£Ö¤³õÊ¼»¯Ö»½øÈëÒ»´Î
+		if ((g_rectCount==1)&&init_down==false) //å¿…é¡»åŒé‡åˆ¤æ–­ä¿è¯åˆå§‹åŒ–åªè¿›å…¥ä¸€æ¬¡
 		{
 			xMin=kinectImage.at(0).select.x;
 			yMin=kinectImage.at(0).select.y;
@@ -359,7 +359,7 @@ DWORD WINAPI CkinectDlg::kcf1proc(LPVOID lpParameter)
 
 			//rectangle( kinectImage.at(0).image, Point( xMin, yMin ), Point( xMin+width, yMin+height), Scalar( 0, 255, 0 ), 1, 8 );
 
-			insertToQueue(temp_depth,Rect(xMin, yMin, width, height),1); //Ïò»º³åÇø´æ´¢µ±Ç°µã
+			insertToQueue(temp_depth,Rect(xMin, yMin, width, height),1); //å‘ç¼“å†²åŒºå­˜å‚¨å½“å‰ç‚¹
 
 			if(!roi_frame.empty())
 			{
@@ -382,7 +382,7 @@ DWORD WINAPI CkinectDlg::kcf1proc(LPVOID lpParameter)
 			if ((result.x+result.width>kinectImage.at(0).image.cols) || (result.y+result.height>kinectImage.at(0).image.rows)
 				||(result.x<0)||(result.y<0))
 			{
-				AfxMessageBox(_T("ÔË¶¯³¬³ö±ß½ç,ÇëÖØ¿ª³ÌĞò"));
+				AfxMessageBox(_T("è¿åŠ¨è¶…å‡ºè¾¹ç•Œ,è¯·é‡å¼€ç¨‹åº"));
 				cvDestroyAllWindows();
 				exit(-1);
 			}
@@ -401,7 +401,7 @@ DWORD WINAPI CkinectDlg::kcf1proc(LPVOID lpParameter)
 
 			if (count_f==3) //record pos per 5 frames
 			{
-				insertToQueue(temp_depth,result,1);  //Ïò»º³åÇø´æ´¢µ±Ç°µã
+				insertToQueue(temp_depth,result,1);  //å‘ç¼“å†²åŒºå­˜å‚¨å½“å‰ç‚¹
 				count_f=0;
 			}
 			
@@ -425,7 +425,7 @@ DWORD WINAPI CkinectDlg::kcf2proc(LPVOID lpParameter)
 	Mat roi_frame;
 	Mat origin_image;
 	Mat new_image;
-	Mat temp_depth; //ÁÙÊ±Éî¶ÈÍ¼
+	Mat temp_depth; //ä¸´æ—¶æ·±åº¦å›¾
 	Rect result;
 	int xMin,yMin,width,height;
 	int count_f = 0;
@@ -433,7 +433,7 @@ DWORD WINAPI CkinectDlg::kcf2proc(LPVOID lpParameter)
 	{
 		if (stop_signal==true)
 		{
-			break; //Ïß³Ì½áÊø±êÖ¾
+			break; //çº¿ç¨‹ç»“æŸæ ‡å¿—
 		}
 
 
@@ -450,7 +450,7 @@ DWORD WINAPI CkinectDlg::kcf2proc(LPVOID lpParameter)
 			tracker_p2.init( Rect(xMin, yMin, width, height),origin_image );
 			//rectangle( kinectImage.at(0).image, Point( xMin, yMin ), Point( xMin+width, yMin+height), Scalar( 0, 255, 0 ), 1, 8 );
 
-			insertToQueue(temp_depth,Rect(xMin, yMin, width, height),2);  //Ïò»º³åÇø´æ´¢µ±Ç°µã
+			insertToQueue(temp_depth,Rect(xMin, yMin, width, height),2);  //å‘ç¼“å†²åŒºå­˜å‚¨å½“å‰ç‚¹
 
 			if(!roi_frame.empty())
 			{
@@ -473,7 +473,7 @@ DWORD WINAPI CkinectDlg::kcf2proc(LPVOID lpParameter)
 			if ((result.x+result.width>kinectImage.at(0).image.cols) || (result.y+result.height>kinectImage.at(0).image.rows)
 				||(result.x<0)||(result.y<0))
 			{
-				AfxMessageBox(_T("ÔË¶¯³¬³ö±ß½ç,ÇëÖØ¿ª³ÌĞò"));
+				AfxMessageBox(_T("è¿åŠ¨è¶…å‡ºè¾¹ç•Œ,è¯·é‡å¼€ç¨‹åº"));
 				cvDestroyAllWindows();
 				exit(-1);
 			}
@@ -490,7 +490,7 @@ DWORD WINAPI CkinectDlg::kcf2proc(LPVOID lpParameter)
 			roi_frame=kinectImage.at(1).image(Rect(result.x, result.y,result.width,result.height));
 			if (count_f==3) //record pos per 5 frames
 			{
-				insertToQueue(temp_depth,result,2);  //Ïò»º³åÇø´æ´¢µ±Ç°µã
+				insertToQueue(temp_depth,result,2);  //å‘ç¼“å†²åŒºå­˜å‚¨å½“å‰ç‚¹
 				count_f=0;
 			}
 
@@ -541,7 +541,7 @@ DWORD WINAPI CkinectDlg::kcf3proc(LPVOID lpParameter)
 			ReleaseMutex(mutex);
 			tracker_p3.init( Rect(xMin, yMin, width, height), kinectImage.at(0).image);
 			//rectangle( kinectImage.at(0).image, Point( xMin, yMin ), Point( xMin+width, yMin+height), Scalar( 0, 255, 0 ), 1, 8 );
-			insertToQueue(temp_depth,Rect(xMin, yMin, width, height),3);  //Ïò»º³åÇø´æ´¢µ±Ç°µã
+			insertToQueue(temp_depth,Rect(xMin, yMin, width, height),3);  //å‘ç¼“å†²åŒºå­˜å‚¨å½“å‰ç‚¹
 			if(!roi_frame.empty())
 			{
 				roi_frame.release();
@@ -563,7 +563,7 @@ DWORD WINAPI CkinectDlg::kcf3proc(LPVOID lpParameter)
 			if ((result.x+result.width>kinectImage.at(0).image.cols) || (result.y+result.height>kinectImage.at(0).image.rows)
 				||(result.x<0)||(result.y<0))
 			{
-				AfxMessageBox(_T("ÔË¶¯³¬³ö±ß½ç,ÇëÖØ¿ª³ÌĞò"));
+				AfxMessageBox(_T("è¿åŠ¨è¶…å‡ºè¾¹ç•Œ,è¯·é‡å¼€ç¨‹åº"));
 				cvDestroyAllWindows();
 				exit(-1);
 			}
@@ -580,7 +580,7 @@ DWORD WINAPI CkinectDlg::kcf3proc(LPVOID lpParameter)
 			}
 			roi_frame=kinectImage.at(2).image(Rect(result.x, result.y,result.width,result.height));
 
-			//±£´æµ±Ç°ÔË¶¯µã
+			//ä¿å­˜å½“å‰è¿åŠ¨ç‚¹
 			if (count_f==3) //record pos per 5 frames
 			{
 				insertToQueue(temp_depth,result,3);
@@ -609,13 +609,13 @@ DWORD WINAPI CkinectDlg::kcf3proc(LPVOID lpParameter)
 
 void CkinectDlg::OnBnClickedButton1()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	// initialize context
 	XnStatus isError = XN_STATUS_OK;
 	xn::Context context;
 	
 	isError = context.Init();
-	context.SetGlobalMirror(true);//¾µÏñÄ£Ê½
+	context.SetGlobalMirror(true);//é•œåƒæ¨¡å¼
 	// create depth generator
 	xn::DepthGenerator depthGen;
 	isError = depthGen.Create(context);
@@ -812,11 +812,11 @@ void CkinectDlg::OnBnClickedButton1()
 	context.Shutdown();
 	
 
-	//ÖØÖÃÈ«¾Ö±äÁ¿
+	//é‡ç½®å…¨å±€å˜é‡
 
     select_flag=false;
 	Get_rect=false;
-	g_rectCount=0; //¼ÇÂ¼»­¿òÊıÁ¿
+	g_rectCount=0; //è®°å½•ç”»æ¡†æ•°é‡
 	stop_signal=false;
 	tracker_1 = queue<MyPoint>();
 	tracker_2 = queue<MyPoint>();
@@ -835,7 +835,7 @@ void CkinectDlg::insertToQueue(Mat temp_depth, Rect target,int port)
 	data[0]=target.x+(float(target.width)/2);
 	data[1]=target.y+(float(target.height)/2);
 	
-	//data[2]=kinectImage.at(0).depth.at<uchar>((int)data[1],(int)data[0]); //È«¾Ö±äÁ¿ È¡µ±Ç°Éî¶ÈÍ¼ÖĞµÄZÖµ Ğ§ÂÊÂı
+	//data[2]=kinectImage.at(0).depth.at<uchar>((int)data[1],(int)data[0]); //å…¨å±€å˜é‡ å–å½“å‰æ·±åº¦å›¾ä¸­çš„Zå€¼ æ•ˆç‡æ…¢
 	
 	uchar* row_points = temp_depth.ptr<uchar>((int)data[1]);
 	data[2] = row_points[(int)data[0]];
@@ -893,7 +893,7 @@ DWORD WINAPI CkinectDlg::savePoint(LPVOID lpParameter)
 		{
 			try
 			{
-				WaitForSingleObject(mutex,INFINITE); //»¥³âºó¶ÔÏó±ä³ÉÁËconst¶ÔÏó£¿
+				WaitForSingleObject(mutex,INFINITE); //äº’æ–¥åå¯¹è±¡å˜æˆäº†constå¯¹è±¡ï¼Ÿ
 				temp_1=tracker_1;
 				temp_2=tracker_2;
 				temp_3=tracker_3;
@@ -901,13 +901,13 @@ DWORD WINAPI CkinectDlg::savePoint(LPVOID lpParameter)
 				FILE *fp = fopen("pointData.txt","w");
 				if (!fp)
 				{
-					AfxMessageBox(_T("ÎÄ¼şÃû´íÎó"));
+					AfxMessageBox(_T("æ–‡ä»¶åé”™è¯¯"));
 					cvDestroyAllWindows();
 					exit(-1);
 				}
 				for (int i=0;i<num_of_savepoint;i++)
 				{
-					t1 = temp_1.front(); //ÏÈÈ¡ÔªËØÔÙµ¯³öÊı¾İ,pop²»ÊÇÓÃÀ´È¡Êı¾İµÄ
+					t1 = temp_1.front(); //å…ˆå–å…ƒç´ å†å¼¹å‡ºæ•°æ®,popä¸æ˜¯ç”¨æ¥å–æ•°æ®çš„
 					temp_1.pop();
 					fprintf(fp,"%f %f %f\n",t1.x,t1.y,t1.z);
 					t2 = temp_2.front();
@@ -922,12 +922,12 @@ DWORD WINAPI CkinectDlg::savePoint(LPVOID lpParameter)
 				tracker_1=queue<MyPoint>();
 				tracker_2=queue<MyPoint>();
 				tracker_3=queue<MyPoint>();
-				AfxMessageBox(_T("¶¯×÷²¶»ñÍê³É"));
+				AfxMessageBox(_T("åŠ¨ä½œæ•è·å®Œæˆ"));
 				
 			}
 			catch (CException* e)
 			{
-				AfxMessageBox(_T("ÔË¶¯±£´æÊ§°Ü"));
+				AfxMessageBox(_T("è¿åŠ¨ä¿å­˜å¤±è´¥"));
 				exit(-1);
 			}
 			
@@ -939,15 +939,15 @@ DWORD WINAPI CkinectDlg::savePoint(LPVOID lpParameter)
 	return 0;
 }
 
-void CkinectDlg::OnBnClickedButton2() //¼ÆËã·¨ÏòÁ¿µÄ´úÂë
+void CkinectDlg::OnBnClickedButton2() //è®¡ç®—æ³•å‘é‡çš„ä»£ç 
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	
 	ifstream in("pointData.txt");
 
 	if (!in)
 	{
-		AfxMessageBox(_T("²»´æÔÚµãÎÄ¼ş"));
+		AfxMessageBox(_T("ä¸å­˜åœ¨ç‚¹æ–‡ä»¶"));
 		exit(-1);
 	}
 
@@ -958,23 +958,23 @@ void CkinectDlg::OnBnClickedButton2() //¼ÆËã·¨ÏòÁ¿µÄ´úÂë
 	MyPoint temp_pt;
 	string line;
 
-	while (in.peek()!=EOF) //peekÊÇÅĞ¶ÏÏÂÒ»¸ö×Ö·û£¬µ«È´²»ÒÆ¶¯ÎÄ¼şÖ¸Õë
+	while (in.peek()!=EOF) //peekæ˜¯åˆ¤æ–­ä¸‹ä¸€ä¸ªå­—ç¬¦ï¼Œä½†å´ä¸ç§»åŠ¨æ–‡ä»¶æŒ‡é’ˆ
 	{
 		getline(in,line);
-		sscanf(line.c_str(),"%f%f%f",&temp_pt.x,&temp_pt.y,&temp_pt.z); //Èç¹ûÊÇ¶ººÅ£¬¿ÉÒÔÓÃ%[^,]±íÊ¾È¡·Ç,µÄ×Ö·û
+		sscanf(line.c_str(),"%f%f%f",&temp_pt.x,&temp_pt.y,&temp_pt.z); //å¦‚æœæ˜¯é€—å·ï¼Œå¯ä»¥ç”¨%[^,]è¡¨ç¤ºå–é,çš„å­—ç¬¦
 		pt1.push(temp_pt);
 
 		getline(in,line);
-		sscanf(line.c_str(),"%f%f%f",&temp_pt.x,&temp_pt.y,&temp_pt.z); //Èç¹ûÊÇ¶ººÅ£¬¿ÉÒÔÓÃ%[^,]±íÊ¾È¡·Ç,µÄ×Ö·û
+		sscanf(line.c_str(),"%f%f%f",&temp_pt.x,&temp_pt.y,&temp_pt.z); //å¦‚æœæ˜¯é€—å·ï¼Œå¯ä»¥ç”¨%[^,]è¡¨ç¤ºå–é,çš„å­—ç¬¦
 		pt2.push(temp_pt);
 
 		getline(in,line);
-		sscanf(line.c_str(),"%f%f%f",&temp_pt.x,&temp_pt.y,&temp_pt.z); //Èç¹ûÊÇ¶ººÅ£¬¿ÉÒÔÓÃ%[^,]±íÊ¾È¡·Ç,µÄ×Ö·û
+		sscanf(line.c_str(),"%f%f%f",&temp_pt.x,&temp_pt.y,&temp_pt.z); //å¦‚æœæ˜¯é€—å·ï¼Œå¯ä»¥ç”¨%[^,]è¡¨ç¤ºå–é,çš„å­—ç¬¦
 		pt3.push(temp_pt);
 
 	}
 	
-	//¼ÆËãÃ¿Èı¸öµãµÄ·¨ÏòÁ¿£¬ÁôÒâË³Ğò
+	//è®¡ç®—æ¯ä¸‰ä¸ªç‚¹çš„æ³•å‘é‡ï¼Œç•™æ„é¡ºåº
 
 
 
