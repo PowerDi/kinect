@@ -811,6 +811,19 @@ void CkinectDlg::OnBnClickedButton1()
 	
 	context.Shutdown();
 	
+
+	//重置全局变量
+
+    select_flag=false;
+	Get_rect=false;
+	g_rectCount=0; //记录画框数量
+	stop_signal=false;
+	tracker_1 = queue<MyPoint>();
+	tracker_2 = queue<MyPoint>();
+	tracker_3 = queue<MyPoint>();
+	kinectImage.clear();
+	kinectImage = vector<CvKinectImage>(3);
+
 }
 
 

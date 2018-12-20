@@ -1,4 +1,4 @@
-﻿生成启动时间为 2018/12/18 16:56:59。
+﻿生成启动时间为 2018/12/20 20:57:21。
      1>项目“E:\scut\jiulong\KCF_three_thread\kinect\kinect\kinect.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\kinect.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
@@ -11,17 +11,17 @@
      1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(215): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
      1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(216): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
      1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(284): warning C4018: “<”: 有符号/无符号不匹配
-     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(837): warning C4018: “<”: 有符号/无符号不匹配
-     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(846): warning C4018: “<”: 有符号/无符号不匹配
-     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(855): warning C4018: “<”: 有符号/无符号不匹配
-     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(888): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(850): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(859): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(868): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(901): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(915): warning C4101: “e”: 未引用的局部变量
-     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(951): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(928): warning C4101: “e”: 未引用的局部变量
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(964): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(955): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(968): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(959): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>e:\scut\jiulong\kcf_three_thread\kinect\kinect\kinectdlg.cpp(972): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
        ResourceCompile:
          所有输出均为最新。
@@ -48,4 +48,4 @@
 
 生成成功。
 
-已用时间 00:00:44.27
+已用时间 00:00:04.74
