@@ -264,6 +264,7 @@ bool select_flag=false;
 bool Get_rect=false;
 int num_of_savepoint = 100; //运动多少个点就进行保存
 int g_rectCount=0; //记录画框数量
+extern int* flag_Captured;  //全局变量指示采集数据是否完成 0表示未完成 1表示完成
 bool stop_signal=false;
 vector<SColorPoint3D> vPointCloud;
 HANDLE mutex = CreateMutex(NULL,false,NULL);
@@ -340,6 +341,8 @@ DWORD WINAPI CkinectDlg::kcf1proc(LPVOID lpParameter)
 	int count_f=0; //record fps
 	while (1)
 	{
+		
+		Sleep(30);
 		if (stop_signal==true)
 		{
 			break; //线程结束标志
@@ -431,6 +434,7 @@ DWORD WINAPI CkinectDlg::kcf2proc(LPVOID lpParameter)
 	int count_f = 0;
 	while (1)
 	{
+		Sleep(30);
 		if (stop_signal==true)
 		{
 			break; //线程结束标志
@@ -523,6 +527,7 @@ DWORD WINAPI CkinectDlg::kcf3proc(LPVOID lpParameter)
 	int count_f = 0;
 	while (1)
 	{
+		Sleep(30);
 		if (stop_signal==true)
 		{
 			break;
@@ -889,6 +894,7 @@ DWORD WINAPI CkinectDlg::savePoint(LPVOID lpParameter)
 	MyPoint t1,t2,t3;
 	while (1)
 	{
+		Sleep(1000);
 		if (stop_signal==true)
 		{
 			break;
@@ -926,6 +932,7 @@ DWORD WINAPI CkinectDlg::savePoint(LPVOID lpParameter)
 				tracker_1=queue<MyPoint>();
 				tracker_2=queue<MyPoint>();
 				tracker_3=queue<MyPoint>();
+				*flag_Captured = *flag_Captured + 1; //数据保存完毕
 				AfxMessageBox(_T("动作捕获完成"));
 				
 			}
