@@ -22,6 +22,7 @@
     <None Include="res\kinect.ico">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kinect.h">

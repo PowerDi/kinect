@@ -264,7 +264,7 @@ bool select_flag=false;
 bool Get_rect=false;
 int num_of_savepoint = 50; //运动多少个点就进行保存
 int g_rectCount=0; //记录画框数量
-extern int* flag_Captured;  //全局变量指示采集数据是否完成 0表示未完成 1表示完成
+//extern int* flag_Captured;  //全局变量指示采集数据是否完成 0表示未完成 1表示完成
 bool stop_signal=false;
 vector<SColorPoint3D> vPointCloud;
 HANDLE mutex = CreateMutex(NULL,false,NULL);
@@ -705,6 +705,7 @@ void CkinectDlg::OnBnClickedButton1()
 		kinectImage.at(2).image=cvarrToMat(kinectImage_imageShow);
 		kinectImage.at(2).depth=cvarrToMat(kinectImage_depthShow);
 		//kinectImage.at(2).depth_origin  = kinectImage_depth;
+		stop_signal = false; //允许线程
 		hThread1 = CreateThread(NULL,0,kcf1proc,NULL,0,NULL);  
 		hThread2 = CreateThread(NULL,0,kcf2proc,NULL,0,NULL);
 		hThread3 = CreateThread(NULL,0,kcf3proc,NULL,0,NULL);
@@ -822,7 +823,6 @@ void CkinectDlg::OnBnClickedButton1()
     select_flag=false;
 	Get_rect=false;
 	g_rectCount=0; //记录画框数量
-	stop_signal=false;
 	tracker_1 = queue<MyPoint>();
 	tracker_2 = queue<MyPoint>();
 	tracker_3 = queue<MyPoint>();
@@ -932,7 +932,7 @@ DWORD WINAPI CkinectDlg::savePoint(LPVOID lpParameter)
 				tracker_1=queue<MyPoint>();
 				tracker_2=queue<MyPoint>();
 				tracker_3=queue<MyPoint>();
-				*flag_Captured = *flag_Captured + 1; //数据保存完毕
+				//*flag_Captured = *flag_Captured + 1; //数据保存完毕
 				AfxMessageBox(_T("动作捕获完成"));
 				
 			}
