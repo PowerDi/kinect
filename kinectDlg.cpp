@@ -262,7 +262,7 @@ struct CvKinectImage
 //全局变量定义区
 bool select_flag=false;
 bool Get_rect=false;
-int num_of_savepoint = 100; //运动多少个点就进行保存
+int num_of_savepoint = 50; //运动多少个点就进行保存
 int g_rectCount=0; //记录画框数量
 extern int* flag_Captured;  //全局变量指示采集数据是否完成 0表示未完成 1表示完成
 bool stop_signal=false;
